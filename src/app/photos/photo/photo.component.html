@@ -1,0 +1,38 @@
+<div class="col-md-8 offset-md-2 col-lg-4 offset-lg-4">
+  <div class="card shadow-lg ">
+    <div class="card-body">
+      <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+        <div class="text-center mb-4 mt-3">
+          <img [src]="imgSrc" (click)="fileUploader.click()" class="img-responsive default_image">
+        </div>
+        <div class="form-group">
+          <label>Select file to upload<span class="text-danger">*</span></label>
+          <input type="file" accept="image/*" class="form-control" #fileUploader formControlName="photoUrl"
+            (change)="preview($event)" style="padding-bottom: 35px">
+          <div class="text-danger" *ngIf="isSubmitted">This field is required
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <input type="text" class="form-control" formControlName="caption" placeholder="Photo Caption">
+          <div class="text-danger" *ngIf="isSubmitted">This field is required.
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <select class="form-control" formControlName="category">
+            <option value="Natural">Natural</option>
+            <option value="Sport">Sport</option>
+            <option value="Beach">Beach</option>
+            <option value="People">People</option>
+            <option value="Cars">Cars</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-block shadow mb-4">Submit</button>
+        </div>
+        <div class="form-group">
+          <a routerLink="/photo/gallery" class="float-left text-info"><i class="fas fa-hand-point-left"></i>
+            Gallery</a> </div>
+      </form>
+    </div>
+  </div>
+</div>

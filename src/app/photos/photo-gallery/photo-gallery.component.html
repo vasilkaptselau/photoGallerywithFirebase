@@ -1,0 +1,27 @@
+<table *ngIf="photoList">
+  <tr *ngFor="let i of rowIndexArray">
+    <td>
+      <div class="imagebox_add_new text-center" *ngIf="i==0">
+        <a routerLink="/photo/upload">
+          <img src="../../../assets/img/icon-upload.png" class="img-fluid shadow">
+        </a>
+      </div>
+      <div class="imagebox shadow" *ngIf="i!=0">
+        <img [src]="photoList[3*i-1].photoUrl" class="img-fluid">
+        <span class="imagebox-desc">{{photoList[3*i-1].caption}}</span>
+      </div>
+    </td>
+    <td *ngIf="photoList[3*i]">
+      <div class="imagebox shadow-sm">
+        <img [src]="photoList[3*i].photoUrl" class="img-fluid">
+        <span class="imagebox-desc">{{photoList[3*i].caption}}</span>
+      </div>
+    </td>
+    <td *ngIf="photoList[3*i+1]">
+      <div class="imagebox  shadow-lg">
+        <img [src]="photoList[3*i+1].photoUrl" class="img-fluid">
+        <span class="imagebox-desc">{{photoList[3*i+1].caption}}</span>
+      </div>
+    </td>
+  </tr>
+</table>

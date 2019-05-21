@@ -1,0 +1,11 @@
+.default_image {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-shadow: 7px 7px 5px gray;
+  }
+}
