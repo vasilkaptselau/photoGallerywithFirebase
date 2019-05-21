@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyAegjN4zuwglzeWnE0UyU5vc0ZtRWbe-Is',
-    authDomain: 'photo-gallery-8b44e.firebaseapp.com',
-    databaseURL: 'https://photo-gallery-8b44e.firebaseio.com',
-    projectId: 'photo-gallery-8b44e',
-    storageBucket: 'photo-gallery-8b44e.appspot.com',
-    messagingSenderId: '938535597856',
-    appId: '1:938535597856:web:b915d4ba8b52b2a3'
+    apiKey: 'your ApiKey',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: ''
   }
 };
 
